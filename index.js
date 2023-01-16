@@ -8,9 +8,8 @@ app.use(express.json())
 
 const postsRouter = require('./routes/posts.router')
 
-app.use('/', (request, response) => {
-    const response = "Hallo"
-    response.status(200).json(response)
+app.get('/', (req, res) => {
+    res.send("Hallo")
 })
 app.use("/api/v1/posts", postsRouter)
 
