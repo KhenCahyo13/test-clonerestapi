@@ -2,7 +2,7 @@ const pool = require("../database/index")
 const postsController = {
     getAll: async (req, res) => {
         try {
-            const [rows, fields] = await pool.query("select * from posts")
+            const [rows, fields] = await pool.query("select * from pengguna")
             res.json({
                 data: rows
             })
